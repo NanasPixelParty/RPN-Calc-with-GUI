@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="340.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hellofx.CalculatorController">
+   <children>
+      <MenuBar layoutY="-1.0" prefHeight="28.0" prefWidth="340.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+        <menus>
+          <Menu fx:id="runMenu" mnemonicParsing="false" text="Settings">
+            <items>
+                  <RadioMenuItem fx:id="runModeMenuItem" mnemonicParsing="false" selected="true" text="Run-Mode">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="mode" />
+                     </toggleGroup>
+                  </RadioMenuItem>
+                  <RadioMenuItem fx:id="stepModeMenuItem" mnemonicParsing="false" text="Step-Mode" toggleGroup="$mode" />
+              <MenuItem fx:id="quitMenuItem" mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <SplitPane dividerPositions="0.17553191489361702" layoutX="-1.0" layoutY="33.0" orientation="VERTICAL" prefHeight="375.0" prefWidth="341.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TextField fx:id="anzeigeTextArea" alignment="CENTER_RIGHT" layoutX="12.0" prefHeight="62.0" prefWidth="313.0">
+                     <font>
+                        <Font name="Symbol" size="24.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <GridPane layoutX="6.0" layoutY="6.0" prefHeight="295.0" prefWidth="328.0" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="6.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button fx:id="button1" alignment="CENTER" mnemonicParsing="false" prefHeight="72.0" prefWidth="81.0" text="1" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                           <font>
+                              <Font name="Symbol" size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="button2" alignment="CENTER" layoutX="10.0" layoutY="11.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="81.0" text="2" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                           <font>
+                              <Font name="Symbol" size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="button3" alignment="CENTER" layoutX="92.0" layoutY="11.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="81.0" text="3" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+                           <font>
+                              <Font name="Symbol" size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="malButton" alignment="CENTER" layoutX="174.0" layoutY="11.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="81.0" text="x" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER">
+                           <font>
+                              <Font name="Symbol" size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="button4" layoutX="257.0" layoutY="11.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="81.0" text="4" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Symbol" size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="button5" layoutX="10.0" layoutY="85.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="81.0" text="5" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Symbol" size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="button6" layoutX="92.0" layoutY="85.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="81.0" text="6" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Symbol" size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="plusButton" layoutX="174.0" layoutY="85.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="81.0" text="+" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Symbol" size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="button7" layoutX="257.0" layoutY="85.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="81.0" text="7" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Symbol" size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="button8" layoutX="10.0" layoutY="159.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="81.0" text="8" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Symbol" size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="button9" layoutX="92.0" layoutY="159.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="81.0" text="9" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Symbol" size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="calculateButton" layoutX="174.0" layoutY="159.0" mnemonicParsing="false" onAction="#calculate" prefHeight="72.0" prefWidth="81.0" text="=" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Symbol" size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="loeschenButton" layoutX="257.0" layoutY="159.0" mnemonicParsing="false" onAction="#deleteLastCharacter" prefHeight="72.0" prefWidth="81.0" text="DEL" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Symbol" size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="button0" layoutX="257.0" layoutY="233.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="81.0" text="0" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Symbol" size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="clearAllButton" layoutX="256.0" layoutY="231.0" mnemonicParsing="false" onAction="#clearTextArea" prefHeight="72.0" prefWidth="81.0" text="CL" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Symbol" size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="quitButton" layoutX="256.0" layoutY="231.0" mnemonicParsing="false" onAction="#quit" prefHeight="72.0" prefWidth="81.0" text="QUIT" textAlignment="CENTER" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Symbol" size="20.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
